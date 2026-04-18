@@ -9,22 +9,27 @@ public class Login {
     @Given("login url")
     public void login_url() {
         // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        System.out.println("in url");
     }
+
     @When("enter username")
     public void enter_username() {
         // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        System.out.println("in username");
     }
+
     @When("enter password")
     public void enter_password() {
         // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        System.out.println("in password");
+
     }
+
     @Then("Login to home page")
     public void login_to_home_page() {
         // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        System.out.println("in homepage");
+
     }
 
 }
