@@ -1,17 +1,17 @@
 package stepDefinitions;
 
-import RunTime.SharedDriver;
+import PageObjects.PageObjectLogin;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.testng.Assert;
 
-public class Login {
+public class stepDefLogin {
+    PageObjectLogin pol;
+
 
     @Given("login url")
     public void login_url() {
-        // Write code here that turns the phrase above into concrete actions
-        System.out.println("in url");
+
     }
 
     @When("enter username")
