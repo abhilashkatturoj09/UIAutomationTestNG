@@ -6,14 +6,24 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class SharedDriver {
-    WebDriver driver;
+    private WebDriver driver;
+
 
     @Before
     public void setup() {
         System.out.println("in initialization");
         System.setProperty("webdriver.chrome.driver", "/Users/abhilashkatturoj/Abhilash/UIAutomationTestNG/Drivers/chromedriver");
         driver = new ChromeDriver();
+        setDriver(driver);
         driver.get("https://www.google.com");
+    }
+
+    public void setDriver(WebDriver driver) {
+        this.driver = driver;
+    }
+
+    public WebDriver getDriver() {
+        return driver;
     }
 
     @After
