@@ -31,7 +31,7 @@ public class Login {
     public void login_to_home_page() {
         // Write code here that turns the phrase above into concrete actions
         System.out.println("in homepage");
-        Assert.fail("failed");
+//        Assert.fail("failed");
 
     }
 

@@ -14,7 +14,8 @@ public class takeScreenshot extends SharedDriver {
     //    public  static sspath=take
     public String getScreenShot(String testcasename) throws IOException {
         System.out.println("in before screenshot");
-        WebDriver driver1 = getDriver();
+        SharedDriver sd = new SharedDriver();
+        WebDriver driver1 = sd.getDriver();
         TakesScreenshot ts = (TakesScreenshot) driver1;
         File source = ts.getScreenshotAs(OutputType.FILE);
         File file = new File("/Users/abhilashkatturoj/Abhilash/UIAutomationTestNG/imagereports/" + testcasename + ".png");
