@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="true" thread-count="4">
+    <test verbose="2" preserve-order="true" name="/Users/abhilashkatturoj/Abhilash/UIAutomationTestNG">
+        <classes>
+            <class name="RunnerFile.TestRunner"/>
+        </classes>
+    </test>
+</suite>
