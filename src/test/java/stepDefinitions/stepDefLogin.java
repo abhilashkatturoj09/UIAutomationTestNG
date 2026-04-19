@@ -1,17 +1,25 @@
 package stepDefinitions;
 
 import PageObjects.PageObjectLogin;
+import RunTime.BasePage;
+import RunTime.SharedDriver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.WebDriver;
 
 public class stepDefLogin {
-    PageObjectLogin pol;
+    WebDriver driver = SharedDriver.getDriver();
+    PageObjectLogin login;
 
+    public stepDefLogin() {
+        login = new PageObjectLogin(driver);
+    }
 
     @Given("login url")
     public void login_url() {
 
+        login.openURL();
     }
 
     @When("enter username")

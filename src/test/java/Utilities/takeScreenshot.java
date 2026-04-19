@@ -9,14 +9,15 @@ import org.openqa.selenium.WebDriver;
 import java.io.File;
 import java.io.IOException;
 
-public class takeScreenshot extends SharedDriver {
+public class takeScreenshot {
 
     //    public  static sspath=take
     public String getScreenShot(String testcasename) throws IOException {
         System.out.println("in before screenshot");
-        SharedDriver sd = new SharedDriver();
-        WebDriver driver1 = sd.getDriver();
-        TakesScreenshot ts = (TakesScreenshot) driver1;
+        WebDriver driver = SharedDriver.getDriver();
+//        SharedDriver sd = new SharedDriver();
+//        WebDriver driver1 = sd.getDriver();
+        TakesScreenshot ts = (TakesScreenshot) driver;
         File source = ts.getScreenshotAs(OutputType.FILE);
         File file = new File("/Users/abhilashkatturoj/Abhilash/UIAutomationTestNG/imagereports/" + testcasename + ".png");
         FileUtils.copyFile(source, file);
