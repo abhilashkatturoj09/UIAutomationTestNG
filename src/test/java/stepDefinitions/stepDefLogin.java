@@ -27,14 +27,16 @@ public class stepDefLogin {
     @When("enter username")
     public void enter_username() {
         // Write code here that turns the phrase above into concrete actions
-        System.out.println("in username");
+//        System.out.println("in username");
+        login.enterValue("Abhilash Katturoj");
     }
 
     @When("enter password")
     public void enter_password() {
         // Write code here that turns the phrase above into concrete actions
-        System.out.println("in password");
+//        System.out.println("in password");
 
+        login.enterButton();
     }
 
     @Then("Login to home page")

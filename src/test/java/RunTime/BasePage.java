@@ -3,20 +3,22 @@ package RunTime;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 public class BasePage {
 
-    protected WebDriver driver;
-
     @Before
     public void setUp() {
-        driver = SharedDriver.init();
+
+        WebDriver driver = new ChromeDriver();
+
+        SharedDriver.setDriver(driver);
+
+        driver.manage().window().maximize();
     }
 
-    @After
+//    @After
     public void tearDown() {
-        SharedDriver.close();
+        SharedDriver.quitDriver();
     }
 }

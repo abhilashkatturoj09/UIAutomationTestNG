@@ -1,6 +1,8 @@
 package Utilities;
 
 import RunTime.SharedDriver;
+import io.cucumber.java.AfterStep;
+import io.cucumber.java.Scenario;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -12,9 +14,13 @@ import java.io.IOException;
 public class takeScreenshot {
 
     //    public  static sspath=take
-    public String getScreenShot(String testcasename) throws IOException {
+
+
+//    @AfterStep
+    public static String getScreenShot(String testcasename) throws IOException {
         System.out.println("in before screenshot");
         WebDriver driver = SharedDriver.getDriver();
+
 //        SharedDriver sd = new SharedDriver();
 //        WebDriver driver1 = sd.getDriver();
         TakesScreenshot ts = (TakesScreenshot) driver;
