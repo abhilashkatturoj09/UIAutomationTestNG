@@ -21,14 +21,14 @@ public class stepDefLogin {
     @Given("login url")
     public void login_url() {
 //        driver.get("https://google.com");
-        login.openURL();
+//        login.openURL();
     }
 
     @When("enter username")
     public void enter_username() {
         // Write code here that turns the phrase above into concrete actions
 //        System.out.println("in username");
-        login.enterValue("Abhilash Katturoj");
+//        login.enterValue("Abhilash Katturoj");
     }
 
     @When("enter password")
