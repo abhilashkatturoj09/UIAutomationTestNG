@@ -25,7 +25,12 @@ public class stepDefsCommon {
     @When("Set input {string} by xpath {string}")
     public void set_input_by_xpath(String string, String string2) {
 
-        driver.findElement(By.xpath(LoadConfig.load(string2))).sendKeys(string);
+        common.setInput(string, string2);
 
+    }
+
+    @When("Click on the button by xpath {string}")
+    public void clickOnTheButtonByXpath(String arg0) {
+        common.clickOntheButton(arg0);
     }
 }
