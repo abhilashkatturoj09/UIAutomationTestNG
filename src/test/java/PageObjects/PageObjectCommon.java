@@ -3,6 +3,8 @@ package PageObjects;
 import RunTime.LoadConfig;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 public class PageObjectCommon {
     public WebDriver driver;
@@ -25,6 +27,8 @@ public class PageObjectCommon {
     }
 
     public void clickOntheButton(String str) {
-        driver.findElement(By.xpath(LoadConfig.load(str))).click();
+        WebElement ele = driver.findElement(By.xpath(LoadConfig.load(str)));
+        Actions action = new Actions(driver);
+        action.moveToElement(ele).click().perform();
     }
 }

@@ -10,7 +10,7 @@ import org.testng.annotations.Listeners;
         glue = {"stepDefinitions", "RunTime"},
         plugin = {"pretty", "html:target/cucumber-reports.html"},
 //                , "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
-        tags = "@inputs"
+        tags = "@login"
 )
 
 //@Listeners({ExtentITestListenerClassAdapter.class})
