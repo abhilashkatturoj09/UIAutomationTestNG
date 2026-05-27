@@ -8,8 +8,8 @@ import org.testng.annotations.Listeners;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = {"stepDefinitions", "RunTime"},
-        plugin = {"pretty", "html:target/cucumber-reports.html"},
-//                , "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
+        plugin = {"pretty", "html:target/cucumber-reports.html"
+                , "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
         tags = "@login"
 )
 

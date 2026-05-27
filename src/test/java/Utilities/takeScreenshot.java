@@ -16,7 +16,7 @@ public class takeScreenshot {
     //    public  static sspath=take
 
 
-//    @AfterStep
+    //    @AfterStep
     public static String getScreenShot(String testcasename) throws IOException {
         System.out.println("in before screenshot");
         WebDriver driver = SharedDriver.getDriver();
@@ -25,10 +25,10 @@ public class takeScreenshot {
 //        WebDriver driver1 = sd.getDriver();
         TakesScreenshot ts = (TakesScreenshot) driver;
         File source = ts.getScreenshotAs(OutputType.FILE);
-        File file = new File("/Users/abhilashkatturoj/Abhilash/UIAutomationTestNG/imagereports/" + testcasename + ".png");
+        File file = new File("/Users/abhilashkatturoj/Abhilash/UIAutomationTestNG/newReporting/" + testcasename + ".png");
         FileUtils.copyFile(source, file);
         System.out.println("in after screenshot");
-        return "/Users/abhilashkatturoj/Abhilash/UIAutomationTestNG/imagereports/" + testcasename + ".png";
+        return "/Users/abhilashkatturoj/Abhilash/UIAutomationTestNG/newReporting/" + testcasename + ".png";
 
     }
 }
