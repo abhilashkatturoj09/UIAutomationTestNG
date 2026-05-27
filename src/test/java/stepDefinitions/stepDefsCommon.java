@@ -33,4 +33,9 @@ public class stepDefsCommon {
     public void clickOnTheButtonByXpath(String arg0) {
         common.clickOntheButton(arg0);
     }
+
+    @When("Verify and Wait for a Text {string} by xpath {string}")
+    public void verifyAndWaitForATextByXpath(String arg0, String arg1) {
+        common.verifyAndWaitForText(arg0, arg1);
+    }
 }
