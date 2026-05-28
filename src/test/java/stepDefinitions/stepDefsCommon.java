@@ -38,4 +38,10 @@ public class stepDefsCommon {
     public void verifyAndWaitForATextByXpath(String arg0, String arg1) {
         common.verifyAndWaitForText(arg0, arg1);
     }
+
+    @When("Page Loaded Successfully by xpath {string}")
+    public void pageLoadedSuccessfullyByXpath(String arg0) {
+
+        common.pageLoadedSuccessfullyByXpath(arg0);
+    }
 }

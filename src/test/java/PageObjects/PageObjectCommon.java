@@ -41,8 +41,15 @@ public class PageObjectCommon {
 
     public void verifyAndWaitForText(String str, String str1) {
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(120));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(LoadConfig.load(str1))));
+
+    }
+
+    public void pageLoadedSuccessfullyByXpath(String str)
+    {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(LoadConfig.load(str))));
 
     }
 }
