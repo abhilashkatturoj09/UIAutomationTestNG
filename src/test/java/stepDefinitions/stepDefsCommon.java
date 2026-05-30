@@ -47,11 +47,11 @@ public class stepDefsCommon {
 
     @When("Select Dropdown {string} by xpath {string}")
     public void selectDropdownByXpath(String arg0, String arg1) {
-        common.selectDropdownByXpath(arg0,arg1);
+        common.selectDropdownByXpath(arg0, arg1);
     }
 
     @When("Wait for page load to Verify by Text {string}")
     public void waitForPageLoadToVerifyByText(String arg0) {
-
+        common.waitForPageLoadToVerifyByText(arg0);
     }
 }
